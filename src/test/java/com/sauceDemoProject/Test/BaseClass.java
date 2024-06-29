@@ -17,7 +17,6 @@ import org.testng.annotations.BeforeMethod;
 import com.sauceDemoProject.Page.LoginPage;
 import com.sauceDemoProject.utilities.ReadConfig;
 
-
 public class BaseClass {
 
 	ReadConfig readconfig = new ReadConfig();
@@ -44,7 +43,7 @@ public class BaseClass {
 
 		Thread.sleep(2000);
 
-		captureScreenShot(driver,"Verify Login Page");
+		captureScreenShot(driver, "Verify Login Page");
 
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
 
@@ -59,7 +58,7 @@ public class BaseClass {
 		log.info("Browser is closed");
 
 	}
-	
+
 	public void captureScreenShot(WebDriver driver, String testName) throws IOException {
 
 		TakesScreenshot screenshot = ((TakesScreenshot) driver);

@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 
 import com.sauceDemoProject.Page.LoginPage;
 
-
 public class TC_01_VerifyLoginFunctionality extends BaseClass {
 
 	@Test()
@@ -20,9 +19,6 @@ public class TC_01_VerifyLoginFunctionality extends BaseClass {
 		log.info("password is entered");
 		LP.clickOnLoginButton();
 		log.info("click on Login Button");
-		
-		
-		
 
 		log.info("apply the validation");
 
@@ -30,9 +26,9 @@ public class TC_01_VerifyLoginFunctionality extends BaseClass {
 		String actualTitle = driver.getTitle();
 		System.out.println("Actual Title---> " + actualTitle);
 
-		Assert.assertEquals(actualTitle, expectedTitle,"Failed due to Title mismatch");
-		captureScreenShot(driver,"verify Login Functionality");
-		
+		Assert.assertEquals(actualTitle, expectedTitle, "Failed due to Title mismatch");
+		captureScreenShot(driver, "verify Login Functionality");
+
 	}
 
 }
